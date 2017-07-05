@@ -3,17 +3,35 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    public bool _inLight;
-    private LightManager _lightManager;
+	public int temprature = 50;
 
-	private void Awake ()
+	void Awake ()
     {
-        _lightManager = Object.FindObjectOfType(typeof(LightManager)) as LightManager;
-        print(_lightManager);
 	}
 
-	private void Update ()
+	void Update ()
     {
-        _inLight = _lightManager.CheckForLights(this);
+	}
+
+	public void TransferHeat (int type) {
+		if (0 == type) {
+			temprature += 40;
+		}
+		else if (1 == type) {
+			if (temprature >= 50) {
+				temprature += 30;
+			}
+			else if (temprature > 50) {
+				temprature = 50;
+			}
+		}
+		else {
+			temprature += 10;
+		}
+	}
+
+	void FixedUpdate () {
+		temprature -= 20;
+
 	}
 }
