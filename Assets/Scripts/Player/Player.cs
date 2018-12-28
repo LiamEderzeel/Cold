@@ -1,37 +1,38 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
 	public int temprature = 50;
+	Slider slider;
 
-	void Awake ()
-    {
+	void Awake () {
+		slider = GameObject.Find("HUD/Heat").GetComponent<Slider>();
 	}
 
-	void Update ()
-    {
-	}
-
-	public void TransferHeat (int type) {
-		if (0 == type) {
-			temprature += 40;
-		}
-		else if (1 == type) {
-			if (temprature >= 50) {
-				temprature += 30;
+	void Update () {
+		if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) {
+			RaycastHit hit;
+			if (Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, 10)) {
+				print(hit.transform.name);
+				Switch _switch = hit.transform.gameObject.GetComponent<Switch>();
+				print(hit.transform.name);
+				if (_switch != null) {
+					print("test");
+					_switch.Interact(this);
+				}
 			}
-			else if (temprature > 50) {
-				temprature = 50;
-			}
-		}
-		else {
-			temprature += 10;
 		}
 	}
 
 	void FixedUpdate () {
-		temprature -= 20;
+		slider.value -= .001f;
+		if (slider.value <= 0f) {
+			// GameManger.Instance.GameOver();
+		}
+	}
 
+	public void TransferHeat () {
+		slider.value = 1;
 	}
 }

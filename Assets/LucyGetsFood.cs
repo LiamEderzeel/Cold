@@ -11,6 +11,6 @@ public class LucyGetsFood : MonoBehaviour {
 	IEnumerator GetFood() {
 		WWW www = new WWW("lucy.dev/service.php");
 		yield return www;
-		print (www.data);
+		print (www.text);
 	}
 }
