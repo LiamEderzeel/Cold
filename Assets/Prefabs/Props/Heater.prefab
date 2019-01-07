@@ -287,7 +287,6 @@ GameObject:
   - component: {fileID: 1344501701362154004}
   - component: {fileID: 3957539331768911192}
   - component: {fileID: 3589220891995204757}
-  - component: {fileID: 2988822283483037114}
   m_Layer: 2
   m_Name: Lamp (1)
   m_TagString: Untagged
@@ -303,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5147215282493587215}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.62, y: 2.282, z: -2}
+  m_LocalPosition: {x: 0.62, y: 2.086, z: -3.788}
   m_LocalScale: {x: 3.5, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 8257783929223548934}
@@ -354,19 +353,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2988822283483037114
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5147215282493587215}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5426342688726661205
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killRange: 0
+  active: 1
 --- !u!1 &8257783929223548955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1821,6 @@ GameObject:
   - component: {fileID: 8257783929527342928}
   - component: {fileID: 8257783929527342940}
   - component: {fileID: 8257783929527342941}
-  - component: {fileID: 8257783929527342930}
   m_Layer: 2
   m_Name: Lamp
   m_TagString: Untagged
@@ -1850,7 +1836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8257783929527342929}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.62, y: 1.735, z: -2}
+  m_LocalPosition: {x: 0.62, y: 1.5389999, z: -3.788}
   m_LocalScale: {x: 3.500002, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 8257783929223548934}
@@ -1901,19 +1887,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8257783929527342930
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257783929527342929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8257783929585506881
 GameObject:
   m_ObjectHideFlags: 0
