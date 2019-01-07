@@ -54,20 +54,30 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Arkham Interactive\- Test Textures -\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\LucyGetsFood.cs" />
+     <Compile Include="Assets\Frost\BurnEffect.cs" />
+     <Compile Include="Assets\Frost\FrostEffect.cs" />
+     <Compile Include="Assets\Scripts\AutoRotate.cs" />
+     <Compile Include="Assets\Scripts\CustomImageEffect.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Lights\CLight.cs" />
-     <Compile Include="Assets\Scripts\Lights\CSpotLight.cs" />
-     <Compile Include="Assets\Scripts\Lights\LightManager.cs" />
+     <Compile Include="Assets\Scripts\HeatSources\CHeater.cs" />
+     <Compile Include="Assets\Scripts\HeatSources\HeatSource.cs" />
+     <Compile Include="Assets\Scripts\HeatSources\Lights\CLight.cs" />
+     <Compile Include="Assets\Scripts\HeatSources\Lights\CSpotLight.cs" />
+     <Compile Include="Assets\Scripts\HeatSources\Lights\LightManager.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovment.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
+     <Compile Include="Assets\Scripts\UI\UIGameOver.cs" />
+     <Compile Include="Assets\Scripts\UI\UIHUD.cs" />
      <Compile Include="Assets\Scripts\Utilitys\Singleton.cs" />
      <Compile Include="Assets\Scripts\Utilitys\Toolbox.cs" />
      <Compile Include="Assets\Scripts\VolumetricLight\VolumetricLight.cs" />
      <Compile Include="Assets\Scripts\VolumetricLight\VolumetricLightRenderer.cs" />
+     <None Include="Assets\Shaders\Frost.shader" />
      <None Include="Assets\Shaders\BilateralBlur.shader" />
+     <None Include="Assets\Frost\HowToUse.txt" />
      <None Include="Assets\Shaders\BlitAdd.shader" />
+     <None Include="Assets\Frost\ImageBlendEffect.shader" />
      <None Include="Assets\Shaders\VolumetricLight.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/projects/Cold/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -288,21 +298,6 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Applications/Unity/Hub/Editor/2018.3.0f2/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
- <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>/projects/Cold/Assets/Plugins/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
- </Reference>
- <Reference Include="ProBuilderCore-Unity5">
- <HintPath>/projects/Cold/Assets/Plugins/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
- </Reference>
- <Reference Include="pb_Stl">
- <HintPath>/projects/Cold/Assets/Plugins/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
- </Reference>
- <Reference Include="KdTreeLib">
- <HintPath>/projects/Cold/Assets/Plugins/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
- </Reference>
- <Reference Include="Poly2Tri">
- <HintPath>/projects/Cold/Assets/Plugins/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Advertisements.Editor">
  <HintPath>/projects/Cold/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
@@ -317,6 +312,21 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/projects/Cold/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="ProBuilderMeshOps">
+ <HintPath>/projects/Cold/Library/PackageCache/com.unity.probuilder@3.0.9/ProBuilder/Classes/ProBuilderMeshOps.dll</HintPath>
+ </Reference>
+ <Reference Include="ProBuilderCore">
+ <HintPath>/projects/Cold/Library/PackageCache/com.unity.probuilder@3.0.9/ProBuilder/Classes/ProBuilderCore.dll</HintPath>
+ </Reference>
+ <Reference Include="pb_Stl">
+ <HintPath>/projects/Cold/Library/PackageCache/com.unity.probuilder@3.0.9/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ </Reference>
+ <Reference Include="KdTreeLib">
+ <HintPath>/projects/Cold/Library/PackageCache/com.unity.probuilder@3.0.9/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ </Reference>
+ <Reference Include="Poly2Tri">
+ <HintPath>/projects/Cold/Library/PackageCache/com.unity.probuilder@3.0.9/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2018.3.0f2/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
