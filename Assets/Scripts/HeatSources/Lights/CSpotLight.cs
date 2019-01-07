@@ -1,24 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CSpotLight : HeatSource, ICLight {
+public class CSpotLight : HeatSource, IHeatSource {
 	[SerializeField] private float _angle;
-	Light _light;
 	public int colliderSides = 18;
 	int colliderHeightSegments = 1; // Not implemented yet
-	public float killRange = 30f;
 	float coldRange = 75f;
 	new MeshCollider collider;
 	new Light light;
 
 	private void Awake() {
-		_light = gameObject.GetComponent<Light>();
-		_angle = _light.spotAngle;
+		collider = GetComponent<MeshCollider>();
+		light = GetComponent<Light>();
+		active = light.enabled;
+		_angle = light.spotAngle;
 	}
 
 	void Start() {
-		collider = GetComponent<MeshCollider>();
-		light = GetComponent<Light>();
 		GenerateCollider();
 	}
 
@@ -34,8 +32,10 @@ public class CSpotLight : HeatSource, ICLight {
 		}
 		return false;
 	}
-	public void Toggle() {
-		_light.enabled = !_light.enabled;
+
+	public override void Toggle() {
+		base.Toggle();
+		light.enabled = !light.enabled;
 	}
 
 	// IEnumerator OnTriggerStay(Collider other) {

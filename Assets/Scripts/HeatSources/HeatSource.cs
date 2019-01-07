@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class HeatSource : MonoBehaviour {
 	public float killRange = 0;
+	public bool active = true;
 
 	protected virtual void OnTriggerStay(Collider other) {
+		if(!active) return;
 		Player player = other.GetComponent<Player>();
 		if(player == null) return;
 
@@ -17,5 +19,9 @@ public class HeatSource : MonoBehaviour {
 		if(distance < killRange) {
 			player.Temprature += .01f;
 		}
+	}
+
+	public virtual void Toggle() {
+		active = !active;
 	}
 }
